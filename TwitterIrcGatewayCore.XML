@@ -1,20 +1,13 @@
 <?xml version="1.0"?>
 <doc>
     <assembly>
-        <name>obj/Release/TwitterIrcGatewayCore</name>
+        <name>TwitterIrcGatewayCore</name>
     </assembly>
     <members>
         <member name="T:Misuzilla.Applications.TwitterIrcGateway.AddInManager">
             <summary>
             アドインを管理する機能を提供します。
             </summary>
-        </member>
-        <member name="M:Misuzilla.Applications.TwitterIrcGateway.AddInManager.#ctor(Misuzilla.Applications.TwitterIrcGateway.Server,Misuzilla.Applications.TwitterIrcGateway.Session)">
-            <summary>
-                <see cref="T:Misuzilla.Applications.TwitterIrcGateway.AddInManager" /> クラスのインスタンスを初期化します。
-            </summary>
-            <param name="server">サーバのインスタンス</param>
-            <param name="session">接続中のセッション情報のインスタンス</param>
         </member>
         <member name="P:Misuzilla.Applications.TwitterIrcGateway.AddInManager.SessionProxy">
             <summary>
@@ -43,6 +36,13 @@
             <summary>
             アドインの型のコレクションを取得します
             </summary>
+        </member>
+        <member name="M:Misuzilla.Applications.TwitterIrcGateway.AddInManager.#ctor(Misuzilla.Applications.TwitterIrcGateway.Server,Misuzilla.Applications.TwitterIrcGateway.Session)">
+            <summary>
+                <see cref="T:Misuzilla.Applications.TwitterIrcGateway.AddInManager" /> クラスのインスタンスを初期化します。
+            </summary>
+            <param name="server">サーバのインスタンス</param>
+            <param name="session">接続中のセッション情報のインスタンス</param>
         </member>
         <member name="M:Misuzilla.Applications.TwitterIrcGateway.AddInManager.Load">
             <summary>
@@ -450,26 +450,6 @@
             設定可能なパラメータを表すクラスです。
             </summary>
         </member>
-        <member name="M:Misuzilla.Applications.TwitterIrcGateway.AddIns.ConfigurationPropertyInfo.#ctor">
-            <summary>
-            ConfigurationPropertyInfo クラスのインスタンスを作成します。
-            </summary>
-        </member>
-        <member name="M:Misuzilla.Applications.TwitterIrcGateway.AddIns.ConfigurationPropertyInfo.#ctor(System.String,System.String,System.Type,System.Object,System.Reflection.MemberInfo)">
-            <summary>
-            ConfigurationPropertyInfo クラスのインスタンスを作成して指定されたパラメータで初期化します。
-            </summary>
-            <param name="name">
-            </param>
-            <param name="description">
-            </param>
-            <param name="type">
-            </param>
-            <param name="defaultValue">
-            </param>
-            <param name="memberInfo">
-            </param>
-        </member>
         <member name="P:Misuzilla.Applications.TwitterIrcGateway.AddIns.ConfigurationPropertyInfo.Name">
             <summary>
             設定名
@@ -494,6 +474,26 @@
             <summary>
             デフォルトの値
             </summary>
+        </member>
+        <member name="M:Misuzilla.Applications.TwitterIrcGateway.AddIns.ConfigurationPropertyInfo.#ctor">
+            <summary>
+            ConfigurationPropertyInfo クラスのインスタンスを作成します。
+            </summary>
+        </member>
+        <member name="M:Misuzilla.Applications.TwitterIrcGateway.AddIns.ConfigurationPropertyInfo.#ctor(System.String,System.String,System.Type,System.Object,System.Reflection.MemberInfo)">
+            <summary>
+            ConfigurationPropertyInfo クラスのインスタンスを作成して指定されたパラメータで初期化します。
+            </summary>
+            <param name="name">
+            </param>
+            <param name="description">
+            </param>
+            <param name="type">
+            </param>
+            <param name="defaultValue">
+            </param>
+            <param name="memberInfo">
+            </param>
         </member>
         <member name="M:Misuzilla.Applications.TwitterIrcGateway.AddIns.ConfigurationPropertyInfo.GetValue(Misuzilla.Applications.TwitterIrcGateway.AddIns.IConfiguration)">
             <summary>
@@ -587,20 +587,6 @@
             認証結果を保持します。
             </summary>
         </member>
-        <member name="M:Misuzilla.Applications.TwitterIrcGateway.AuthenticateResult.#ctor">
-            <summary>
-            認証が成功した状態で初期化します。
-            </summary>
-        </member>
-        <member name="M:Misuzilla.Applications.TwitterIrcGateway.AuthenticateResult.#ctor(Misuzilla.Net.Irc.ErrorReply,System.String)">
-            <summary>
-            認証に失敗しその理由を指定して初期化します。
-            </summary>
-            <param name="errorReply">
-            </param>
-            <param name="message">
-            </param>
-        </member>
         <member name="P:Misuzilla.Applications.TwitterIrcGateway.AuthenticateResult.IsAuthenticated">
             <summary>
             ユーザのアクセスが許可されているかどうかを取得・設定します。
@@ -615,6 +601,20 @@
             <summary>
             認証が失敗した理由を返します。
             </summary>
+        </member>
+        <member name="M:Misuzilla.Applications.TwitterIrcGateway.AuthenticateResult.#ctor">
+            <summary>
+            認証が成功した状態で初期化します。
+            </summary>
+        </member>
+        <member name="M:Misuzilla.Applications.TwitterIrcGateway.AuthenticateResult.#ctor(Misuzilla.Net.Irc.ErrorReply,System.String)">
+            <summary>
+            認証に失敗しその理由を指定して初期化します。
+            </summary>
+            <param name="errorReply">
+            </param>
+            <param name="message">
+            </param>
         </member>
         <member name="T:Misuzilla.Applications.TwitterIrcGateway.TwitterAuthenticateResult">
             <summary>
@@ -1076,6 +1076,16 @@
             <param name="numReply">リプライ番号</param>
             <param name="commandParams">リプライコマンドパラメータ</param>
         </member>
+        <member name="P:OAuth.OAuthBase.CallbackUrl">
+            <summary>
+            Callback url (oauth_callback)
+            </summary>
+        </member>
+        <member name="P:OAuth.OAuthBase.Verifier">
+            <summary>
+            (oauth_verifier)
+            </summary>
+        </member>
         <member name="T:OAuth.OAuthBase.SignatureTypes">
             <summary>
             Provides a predefined set of algorithms that are supported officially by the protocol
@@ -1089,16 +1099,6 @@
         <member name="T:OAuth.OAuthBase.QueryParameterComparer">
             <summary>
             Comparer class used to perform the sorting of the query parameters
-            </summary>
-        </member>
-        <member name="P:OAuth.OAuthBase.CallbackUrl">
-            <summary>
-            Callback url (oauth_callback)
-            </summary>
-        </member>
-        <member name="P:OAuth.OAuthBase.Verifier">
-            <summary>
-            (oauth_verifier)
             </summary>
         </member>
         <member name="M:OAuth.OAuthBase.ComputeHash(System.Security.Cryptography.HashAlgorithm,System.String)">
@@ -1323,31 +1323,6 @@
             <returns>
             </returns>
         </member>
-        <member name="E:Misuzilla.Applications.TwitterIrcGateway.SessionBase.ConnectionAttached">
-            <summary>
-            セッションに接続が開始された際に発生するイベントです。
-            </summary>
-        </member>
-        <member name="E:Misuzilla.Applications.TwitterIrcGateway.SessionBase.ConnectionDetached">
-            <summary>
-            セッションから接続が切断された際に発生するイベントです。
-            </summary>
-        </member>
-        <member name="E:Misuzilla.Applications.TwitterIrcGateway.SessionBase.BeforeClosing">
-            <summary>
-            セッションが終了する際に発生するイベントです。
-            </summary>
-        </member>
-        <member name="E:Misuzilla.Applications.TwitterIrcGateway.SessionBase.Closing">
-            <summary>
-            セッションが終了中に発生するイベントです。
-            </summary>
-        </member>
-        <member name="E:Misuzilla.Applications.TwitterIrcGateway.SessionBase.AfterClosing">
-            <summary>
-            セッションが終了する処理を終えた際に発生するイベントです。
-            </summary>
-        </member>
         <member name="P:Misuzilla.Applications.TwitterIrcGateway.SessionBase.IsClosing">
             <summary>
             セッションが終了している途中かどうかを取得します。
@@ -1371,6 +1346,31 @@
         <member name="P:Misuzilla.Applications.TwitterIrcGateway.SessionBase.Connections">
             <summary>
             現在セッションにある接続のコレクションを取得します。
+            </summary>
+        </member>
+        <member name="E:Misuzilla.Applications.TwitterIrcGateway.SessionBase.ConnectionAttached">
+            <summary>
+            セッションに接続が開始された際に発生するイベントです。
+            </summary>
+        </member>
+        <member name="E:Misuzilla.Applications.TwitterIrcGateway.SessionBase.ConnectionDetached">
+            <summary>
+            セッションから接続が切断された際に発生するイベントです。
+            </summary>
+        </member>
+        <member name="E:Misuzilla.Applications.TwitterIrcGateway.SessionBase.BeforeClosing">
+            <summary>
+            セッションが終了する際に発生するイベントです。
+            </summary>
+        </member>
+        <member name="E:Misuzilla.Applications.TwitterIrcGateway.SessionBase.Closing">
+            <summary>
+            セッションが終了中に発生するイベントです。
+            </summary>
+        </member>
+        <member name="E:Misuzilla.Applications.TwitterIrcGateway.SessionBase.AfterClosing">
+            <summary>
+            セッションが終了する処理を終えた際に発生するイベントです。
             </summary>
         </member>
         <member name="M:Misuzilla.Applications.TwitterIrcGateway.SessionBase.Attach(Misuzilla.Applications.TwitterIrcGateway.ConnectionBase)">
@@ -1482,11 +1482,6 @@
             TwitterIrcGateway 本体の設定情報を表します。
             </summary>
         </member>
-        <member name="F:Misuzilla.Applications.TwitterIrcGateway.Config.Default">
-            <summary>
-            デフォルトの設定
-            </summary>
-        </member>
         <member name="P:Misuzilla.Applications.TwitterIrcGateway.Config.Interval">
             <summary>
             チェックする間隔を指定します。
@@ -1585,6 +1580,11 @@
         <member name="P:Misuzilla.Applications.TwitterIrcGateway.Config.UpdateDelayTime">
             <summary>
             更新時に何秒待機したのちリクエストを送信するかどうかを指定します。
+            </summary>
+        </member>
+        <member name="F:Misuzilla.Applications.TwitterIrcGateway.Config.Default">
+            <summary>
+            デフォルトの設定
             </summary>
         </member>
         <member name="M:Misuzilla.Applications.TwitterIrcGateway.Config.Load(System.String)">
@@ -1812,17 +1812,6 @@
             IRC上でチャンネルとして表現されるメッセージ送信対象のグループを表します。
             </summary>
         </member>
-        <member name="M:Misuzilla.Applications.TwitterIrcGateway.Group.#ctor">
-            <summary>
-            グループのインスタンスを初期化します。
-            </summary>
-        </member>
-        <member name="M:Misuzilla.Applications.TwitterIrcGateway.Group.#ctor(System.String)">
-            <summary>
-            指定した名前でグループのインスタンスを初期化します。
-            </summary>
-            <param name="name">#で始まるチャンネル名</param>
-        </member>
         <member name="P:Misuzilla.Applications.TwitterIrcGateway.Group.Name">
             <summary>
             チャンネル名を取得・設定します
@@ -1854,19 +1843,9 @@
             チャンネルのモードを取得・設定します
             </summary>
         </member>
-        <member name="P:Misuzilla.Applications.TwitterIrcGateway.Group.IgnoreEchoBack">
+        <member name="M:Misuzilla.Applications.TwitterIrcGateway.Group.#ctor">
             <summary>
-            グループに送信されたメッセージのエコーバックを無視するかどうかを取得します。
-            </summary>
-        </member>
-        <member name="P:Misuzilla.Applications.TwitterIrcGateway.Group.IsOrMatch">
-            <summary>
-            グループのトピックを利用したマッチがメンバとOR条件になっているかどうかを取得します。
-            </summary>
-        </member>
-        <member name="P:Misuzilla.Applications.TwitterIrcGateway.Group.IsRoutable">
-            <summary>
-            TwitterIrcGatewayがトピックなどを考慮してメッセージ送信先として選択できるかどうかを取得します。
+            グループのインスタンスを初期化します。
             </summary>
         </member>
         <member name="M:Misuzilla.Applications.TwitterIrcGateway.Group.Clone">
@@ -1875,6 +1854,12 @@
             </summary>
             <returns>
             </returns>
+        </member>
+        <member name="M:Misuzilla.Applications.TwitterIrcGateway.Group.#ctor(System.String)">
+            <summary>
+            指定した名前でグループのインスタンスを初期化します。
+            </summary>
+            <param name="name">#で始まるチャンネル名</param>
         </member>
         <member name="M:Misuzilla.Applications.TwitterIrcGateway.Group.Exists(System.String)">
             <summary>
@@ -1894,6 +1879,21 @@
             指定したユーザをグループのメンバから削除します。
             </summary>
             <param name="id">ユーザのID</param>
+        </member>
+        <member name="P:Misuzilla.Applications.TwitterIrcGateway.Group.IgnoreEchoBack">
+            <summary>
+            グループに送信されたメッセージのエコーバックを無視するかどうかを取得します。
+            </summary>
+        </member>
+        <member name="P:Misuzilla.Applications.TwitterIrcGateway.Group.IsOrMatch">
+            <summary>
+            グループのトピックを利用したマッチがメンバとOR条件になっているかどうかを取得します。
+            </summary>
+        </member>
+        <member name="P:Misuzilla.Applications.TwitterIrcGateway.Group.IsRoutable">
+            <summary>
+            TwitterIrcGatewayがトピックなどを考慮してメッセージ送信先として選択できるかどうかを取得します。
+            </summary>
         </member>
         <member name="T:Misuzilla.Applications.TwitterIrcGateway.RoutedGroup">
             <summary>
@@ -1935,11 +1935,6 @@
             APIアクセスに利用するプロクシサーバの設定
             </summary>
         </member>
-        <member name="E:Misuzilla.Applications.TwitterIrcGateway.Server.ConnectionAttached">
-            <summary>
-            新たなセッションが開始されたイベント
-            </summary>
-        </member>
         <member name="P:Misuzilla.Applications.TwitterIrcGateway.Server.OAuthClientKey">
             <summary>
             APIアクセスに利用するOAuthのクライアントキー
@@ -1968,6 +1963,11 @@
         <member name="P:Misuzilla.Applications.TwitterIrcGateway.Server.StartTime">
             <summary>
             サーバーが開始された時刻を取得します
+            </summary>
+        </member>
+        <member name="E:Misuzilla.Applications.TwitterIrcGateway.Server.ConnectionAttached">
+            <summary>
+            新たなセッションが開始されたイベント
             </summary>
         </member>
         <member name="P:Misuzilla.Applications.TwitterIrcGateway.Server.Encoding">
@@ -2514,35 +2514,6 @@
             Twitterへの接続と操作を提供します。
             </summary>
         </member>
-        <member name="M:Misuzilla.Applications.TwitterIrcGateway.TwitterService.#ctor(System.String,System.String)">
-            <summary>
-            TwitterService クラスのインスタンスをユーザ名とパスワードで初期化します。
-            </summary>
-            <param name="userName">ユーザー名</param>
-            <param name="password">パスワード</param>
-        </member>
-        <member name="M:Misuzilla.Applications.TwitterIrcGateway.TwitterService.#ctor(System.String,System.String,Misuzilla.Applications.TwitterIrcGateway.TwitterIdentity)">
-            <summary>
-            TwitterService クラスのインスタンスをOAuthを利用する設定で初期化します。
-            </summary>
-            <param name="twitterIdentity">
-            </param>
-        </member>
-        <member name="F:Misuzilla.Applications.TwitterIrcGateway.TwitterService.ServiceServerPrefix">
-            <summary>
-            Twitter APIのエンドポイントURLのプレフィックスを取得・設定します。
-            </summary>
-        </member>
-        <member name="F:Misuzilla.Applications.TwitterIrcGateway.TwitterService.Referer">
-            <summary>
-            リクエストのRefererを取得・設定します。
-            </summary>
-        </member>
-        <member name="F:Misuzilla.Applications.TwitterIrcGateway.TwitterService.ClientName">
-            <summary>
-            リクエストのクライアント名を取得・設定します。この値はsourceパラメータとして利用されます。
-            </summary>
-        </member>
         <member name="E:Misuzilla.Applications.TwitterIrcGateway.TwitterService.CheckError">
             <summary>
             更新チェック時にエラーが発生した場合に発生します。
@@ -2562,6 +2533,35 @@
             <summary>
             ダイレクトメッセージの更新があった場合に発生します。
             </summary>
+        </member>
+        <member name="F:Misuzilla.Applications.TwitterIrcGateway.TwitterService.ServiceServerPrefix">
+            <summary>
+            Twitter APIのエンドポイントURLのプレフィックスを取得・設定します。
+            </summary>
+        </member>
+        <member name="F:Misuzilla.Applications.TwitterIrcGateway.TwitterService.Referer">
+            <summary>
+            リクエストのRefererを取得・設定します。
+            </summary>
+        </member>
+        <member name="F:Misuzilla.Applications.TwitterIrcGateway.TwitterService.ClientName">
+            <summary>
+            リクエストのクライアント名を取得・設定します。この値はsourceパラメータとして利用されます。
+            </summary>
+        </member>
+        <member name="M:Misuzilla.Applications.TwitterIrcGateway.TwitterService.#ctor(System.String,System.String)">
+            <summary>
+            TwitterService クラスのインスタンスをユーザ名とパスワードで初期化します。
+            </summary>
+            <param name="userName">ユーザー名</param>
+            <param name="password">パスワード</param>
+        </member>
+        <member name="M:Misuzilla.Applications.TwitterIrcGateway.TwitterService.#ctor(System.String,System.String,Misuzilla.Applications.TwitterIrcGateway.TwitterIdentity)">
+            <summary>
+            TwitterService クラスのインスタンスをOAuthを利用する設定で初期化します。
+            </summary>
+            <param name="twitterIdentity">
+            </param>
         </member>
         <member name="P:Misuzilla.Applications.TwitterIrcGateway.TwitterService.Proxy">
             <summary>
